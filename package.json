@@ -11,6 +11,10 @@
   "author": "Kamil Kruczek",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "express": "^4.17.1",
     "file-loader": "^6.0.0",
@@ -18,5 +22,9 @@
     "webpack": "^5.0.0-beta.14",
     "webpack-cli": "^3.3.11",
     "webpack-dev-middleware": "^3.7.2"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
