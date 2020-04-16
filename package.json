@@ -16,9 +16,13 @@
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.5.2",
     "express": "^4.17.1",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.2.0",
+    "sass": "^1.26.3",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.4",
     "webpack": "^5.0.0-beta.14",
     "webpack-cli": "^3.3.11",
     "webpack-dev-middleware": "^3.7.2"
