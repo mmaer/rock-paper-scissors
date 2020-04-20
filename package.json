@@ -20,12 +20,14 @@
     "express": "^4.17.1",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.2.0",
+    "react-hot-loader": "^4.12.20",
     "sass": "^1.26.3",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.4",
     "webpack": "^5.0.0-beta.14",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-middleware": "^3.7.2"
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0"
   },
   "dependencies": {
     "react": "^16.13.1",
