@@ -1,0 +1,66 @@
+.symbol {
+  margin: 30px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    transition: box-shadow 0.3s ease-in-out;
+    
+    .symbol__outer {
+      box-shadow: none;
+    }
+
+    .symbol__inner {
+      box-shadow: none;
+    }
+  }
+
+  &__outer {
+    height: 160px;
+    width: 160px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.3s ease-in-out;
+
+    &--paper {
+      background-image: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+      box-shadow: inset 0 -5px 0 0 rgb(53, 70, 191);
+    }
+
+    &--rock {
+      background-image: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+      box-shadow: inset 0 -5px 0 0 rgb(136, 29, 57);
+    }
+
+    &--scissors {
+      background-image: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+      box-shadow: inset 0 -5px 0 0 rgb(177, 107, 41);
+    }
+  }
+
+  &__inner {
+    height: 120px;
+    width: 120px;
+    background-color: rgb(233, 233,233);
+    box-shadow: inset 0 5px 0 0 rgb(186, 189, 211);
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__symbol {
+    display: flex;
+
+    svg {
+      height: 45px;
+      color: rgb(64, 68, 97);
+    }
+  }
+}
