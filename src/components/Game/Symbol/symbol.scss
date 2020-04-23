@@ -1,5 +1,6 @@
 .symbol {
   margin: 30px;
+  border-radius: 50%;
 
   &:hover {
     cursor: pointer;
@@ -17,10 +18,14 @@
     }
   }
 
+  &--win {
+    border: 30px solid rgba(49, 56, 83, 0.3);
+  }
+
   &__outer {
     height: 160px;
     width: 160px;
-    background-color: red;
+    background-color: #fff;
     border-radius: 50%;
     display: flex;
     justify-content: center;

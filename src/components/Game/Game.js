@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import ChooseSymbol from './ChooseSymbol';
+import PickSymbol from './PickSymbol';
 import Round from './Round';
 
 import './game.scss';
 
 const Game = () => {
+  const [userSymbol, setSymbol] = useState('');
 
   return (
     <div className="game">
-      <Round />
+      {userSymbol ? <Round userSymbol={userSymbol} setSymbol={setSymbol} /> : <PickSymbol setSymbol={setSymbol} />}
     </div>
-  )
+  );
 };
 
 export default Game;

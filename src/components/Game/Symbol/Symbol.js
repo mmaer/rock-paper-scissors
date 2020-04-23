@@ -4,23 +4,23 @@ import HandPaper from '../../../SVG/hand-paper.svg';
 import HandRock from '../../../SVG/hand-rock.svg';
 import HandScissors from '../../../SVG/hand-scissors.svg';
 
+import { SYMBOLS } from '../../../constants';
+
 import './symbol.scss';
 
-const TYPES = {
-  PAPER: 'paper',
-  ROCK: 'rock',
-  SCISSORS: 'scissors',
-};
-
 const ICONS = {
-  [TYPES.PAPER]: <HandPaper />,
-  [TYPES.ROCK]: <HandRock />,
-  [TYPES.SCISSORS]: <HandScissors />,
+  [SYMBOLS.PAPER]: <HandPaper />,
+  [SYMBOLS.ROCK]: <HandRock />,
+  [SYMBOLS.SCISSORS]: <HandScissors />,
 }
 
-const Symbol = ({ type = TYPES.PAPER }) => {
+const Symbol = ({ type, setSymbol, className = '' }) => {
+  const onCLick = () => {
+    setSymbol(type);
+  };
+
   return (
-    <div className="symbol">
+    <div className={`symbol ${className}`} onClick={onCLick}>
       <div className={`symbol__outer symbol__outer--${type}`}>
         <div className="symbol__inner">
           <div className="symbol__symbol">
@@ -31,7 +31,5 @@ const Symbol = ({ type = TYPES.PAPER }) => {
     </div>
   )
 };
-
-Symbol.types = TYPES;
 
 export default Symbol;
