@@ -1,8 +1,13 @@
 .footer { 
-  font-size: 11px; 
   text-align: center; 
 
+  &__text {
+    font-size: 14px; 
+    color: #44488d;
+  }
+  
   &__link {
     color: hsl(228, 45%, 44%);
+    text-decoration: none;;
   }
 }
