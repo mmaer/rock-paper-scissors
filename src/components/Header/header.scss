@@ -1,3 +1,5 @@
+@import '../../styles/variable.scss';
+
 .header {
   height: 20vh;
   display: flex;
@@ -8,14 +10,14 @@
     justify-content: space-between;
     margin: 0 auto;
     padding: 15px 20px;
-    border: 3px rgb(92, 101, 124) solid;
+    border: 3px $comet solid;
     border-radius: 10px;
     max-width: 600px;
     width: 85vw;
   }
 
   &__title {
-    color: #fff;
+    color: $white;
     font-size: 52px;
     line-height: 40px;
 
@@ -29,7 +31,7 @@
     justify-content: center;
     padding: 0 5px;
     flex-direction: column;
-    background: #fff;
+    background: $white;
     border-radius: 5px;
     min-width: 100px;
     text-align: center;
@@ -37,12 +39,12 @@
 
   &__score-text {
     font-size: 16px;
-    color: rgb(68, 72, 141);
+    color: $victoria;
   }
 
   &__score-points {
     font-family: 'BarlowSemiCondensedSemiBold';
     font-size: 62px;
-    color: rgb(87, 82, 106);
+    color: $smoky;
   }
 }

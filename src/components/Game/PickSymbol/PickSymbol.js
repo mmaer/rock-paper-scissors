@@ -10,7 +10,7 @@ const PickSymbol = ({ setSymbol }) => (
   <div className="pick-symbol">
     {Object.values(SYMBOLS).map((symbol, index) => (
       <div key={symbol} className="pick-symbol__symbol">
-        <Symbol type={symbol} setSymbol={setSymbol} tabindex={index} />
+        <Symbol type={symbol} setSymbol={setSymbol} tabIndex={index} />
       </div>
     ))}
   </div>

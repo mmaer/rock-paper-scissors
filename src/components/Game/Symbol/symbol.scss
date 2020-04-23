@@ -1,3 +1,5 @@
+@import '../../../styles/variable.scss';
+
 $symbol-outer-size: 200px;
 $symbol-inner-size: 160px;
 
@@ -21,13 +23,13 @@ $symbol-inner-size: 160px;
   }
 
   &--win {
-    border: 30px solid rgba(49, 56, 83, 0.3);
+    border: 30px solid rgba($pickled-bluewood, 0.3);
   }
 
   &__outer {
     height: $symbol-outer-size;
     width: $symbol-outer-size;
-    background-color: #fff;
+    background-color: $white;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -35,26 +37,26 @@ $symbol-inner-size: 160px;
     transition: box-shadow 0.3s ease-in-out;
 
     &--paper {
-      background-image: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-      box-shadow: inset 0 -5px 0 0 rgb(53, 70, 191);
+      background-image: radial-gradient($royal-blue, $cornflower-blue);
+      box-shadow: inset 0 -5px 0 0 $governor-bay;
     }
 
     &--rock {
-      background-image: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-      box-shadow: inset 0 -5px 0 0 rgb(136, 29, 57);
+      background-image: radial-gradient($cerise-red, $cerise-red-ligh);
+      box-shadow: inset 0 -5px 0 0 $claret;
     }
 
     &--scissors {
-      background-image: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-      box-shadow: inset 0 -5px 0 0 rgb(177, 107, 41);
+      background-image: radial-gradient($gamboge, $fuel-yellow);
+      box-shadow: inset 0 -5px 0 0 $tuscany;
     }
   }
 
   &__inner {
     height: $symbol-inner-size;
     width: $symbol-inner-size;
-    background-color: rgb(233, 233, 233);
-    box-shadow: inset 0 5px 0 0 rgb(186, 189, 211);
+    background-color: $mercury;
+    box-shadow: inset 0 5px 0 0 $blue-haze;
     transition: box-shadow 0.3s ease-in-out;
     border-radius: 50%;
     display: flex;

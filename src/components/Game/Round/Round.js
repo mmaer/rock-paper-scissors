@@ -75,7 +75,7 @@ const Round = ({ userSymbol, setSymbol }) => {
       <div>
         <div className="round__text">YOU PICKED</div>
         <div className="round__symbol">
-          <Symbol type={userSymbol} className={result === RESULTS_TYPES.WIN ? 'symbol--win' : ''} tabindex={0} />
+          <Symbol type={userSymbol} className={result === RESULTS_TYPES.WIN ? 'symbol--win' : ''} tabIndex={0} />
         </div>
       </div>
       {computerSymbol && (
@@ -90,7 +90,7 @@ const Round = ({ userSymbol, setSymbol }) => {
         <div className="round__text">THE HOUSE PICKED</div>
         <div className="round__symbol">
           {computerSymbol ? (
-            <Symbol type={computerSymbol} className={result === RESULTS_TYPES.LOST ? 'symbol--win' : ''} tabindex={0} />
+            <Symbol type={computerSymbol} className={result === RESULTS_TYPES.LOST ? 'symbol--win' : ''} tabIndex={0} />
           ) : (
             <div className="round__empty-symbol" />
           )}

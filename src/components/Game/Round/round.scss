@@ -1,16 +1,18 @@
+@import '../../../styles/variable.scss';
+
 .round {
   display: flex;
   justify-content: center;
   align-items: center;
 
   &__text {
-    color: #fff;
+    color: $white;
     font-size: 24px;
     text-align: center;
   }
 
   &__score-text {
-    color: #fff;
+    color: $white;
     font-size: 32px;
     text-align: center;
   }
@@ -20,11 +22,11 @@
     font-size: 18px;
     padding: 15px 30px;
     border-radius: 10px;
-    color: rgb(87, 84, 106);
+    color: $smoky;
     margin-top: 10px;
 
     &:hover {
-      color: rgb(152, 69, 89);
+      color: $vin-rouge;
     }
   }
 
@@ -37,7 +39,7 @@
   }
 
   &__empty-symbol {
-    background: rgba(31, 38, 63, 0.5);
+    background: rgba($mirage, 0.5);
     border-radius: 50%;
     height: 120px;
     width: 120px;
