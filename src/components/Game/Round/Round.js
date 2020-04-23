@@ -15,16 +15,16 @@ const RESULTS_TYPES = {
 };
 
 const POINTS = {
-  [RESULTS_TYPES.WIN]: (score) => score + 1,
-  [RESULTS_TYPES.REMIS]: (score) => score,
-  [RESULTS_TYPES.LOST]: (score) => score -1,
+  [RESULTS_TYPES.WIN]: score => score + 1,
+  [RESULTS_TYPES.REMIS]: score => score,
+  [RESULTS_TYPES.LOST]: score => score - 1,
 };
 
 const SCORE_TEST = {
   [RESULTS_TYPES.WIN]: 'YOU WIN',
   [RESULTS_TYPES.REMIS]: 'REMIS',
   [RESULTS_TYPES.LOST]: 'YOU LOSE',
-}
+};
 
 const RESULTS = {
   [SYMBOLS.PAPER]: {
@@ -59,12 +59,12 @@ const Round = ({ userSymbol, setSymbol }) => {
       const computerSymbol = getComputerSymbol();
       const result = RESULTS[userSymbol][computerSymbol];
       const newResult = POINTS[result](score);
-      
+
       setScore(newResult);
       setResult(result);
       setComputerSymbol(computerSymbol);
     }, TIME_FOR_COMPUTER_SYMBOL);
-  }, []);
+  });
 
   const playAgain = () => {
     setSymbol('');
@@ -75,25 +75,25 @@ const Round = ({ userSymbol, setSymbol }) => {
       <div>
         <div className="round__text">YOU PICKED</div>
         <div className="round__symbol">
-          <Symbol type={userSymbol} className={result === RESULTS_TYPES.WIN ? 'symbol--win' : ''}/>
+          <Symbol type={userSymbol} className={result === RESULTS_TYPES.WIN ? 'symbol--win' : ''} tabindex={0} />
         </div>
       </div>
       {computerSymbol && (
         <div>
           <h2 className="round__score-text">{SCORE_TEST[result]}</h2>
-          <button className="round__button" onClick={playAgain}>PLAY AGAIN</button>
+          <button className="round__button" onClick={playAgain}>
+            PLAY AGAIN
+          </button>
         </div>
       )}
       <div>
         <div className="round__text">THE HOUSE PICKED</div>
         <div className="round__symbol">
-          {computerSymbol ? 
-            <Symbol 
-              type={computerSymbol} 
-              className={result === RESULTS_TYPES.LOST ? 'symbol--win' : ''}
-            /> : 
+          {computerSymbol ? (
+            <Symbol type={computerSymbol} className={result === RESULTS_TYPES.LOST ? 'symbol--win' : ''} tabindex={0} />
+          ) : (
             <div className="round__empty-symbol" />
-          }
+          )}
         </div>
       </div>
     </div>

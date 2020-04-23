@@ -8,9 +8,9 @@ import './pick-symbol.scss';
 
 const PickSymbol = ({ setSymbol }) => (
   <div className="pick-symbol">
-    {Object.values(SYMBOLS).map((symbol) => (
+    {Object.values(SYMBOLS).map((symbol, index) => (
       <div key={symbol} className="pick-symbol__symbol">
-        <Symbol type={symbol} setSymbol={setSymbol} />
+        <Symbol type={symbol} setSymbol={setSymbol} tabindex={index} />
       </div>
     ))}
   </div>

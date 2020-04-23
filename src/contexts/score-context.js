@@ -2,7 +2,7 @@ import { createContext } from 'react';
 
 const ScoreContext = createContext({
   score: 0,
-  setScore: () => { },
+  setScore: () => {},
 });
 
 export default ScoreContext;

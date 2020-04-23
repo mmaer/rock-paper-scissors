@@ -10,7 +10,7 @@ $symbol-inner-size: 160px;
 
   &:active {
     transition: box-shadow 0.3s ease-in-out;
-    
+
     .symbol__outer {
       box-shadow: none;
     }
@@ -53,7 +53,7 @@ $symbol-inner-size: 160px;
   &__inner {
     height: $symbol-inner-size;
     width: $symbol-inner-size;
-    background-color: rgb(233, 233,233);
+    background-color: rgb(233, 233, 233);
     box-shadow: inset 0 5px 0 0 rgb(186, 189, 211);
     transition: box-shadow 0.3s ease-in-out;
     border-radius: 50%;

@@ -16,12 +16,8 @@ const Header = () => {
           <span>SCISSORS</span>
         </div>
         <div className="header__score">
-          <div className="header__score-text">
-            SCORE
-          </div>
-          <div className="header__score-points">
-            {score}
-          </div>
+          <div className="header__score-text">SCORE</div>
+          <div className="header__score-points">{score}</div>
         </div>
       </div>
     </div>

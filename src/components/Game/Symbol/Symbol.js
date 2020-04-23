@@ -12,24 +12,22 @@ const ICONS = {
   [SYMBOLS.PAPER]: <HandPaper />,
   [SYMBOLS.ROCK]: <HandRock />,
   [SYMBOLS.SCISSORS]: <HandScissors />,
-}
+};
 
-const Symbol = ({ type, setSymbol = () => {}, className = '' }) => {
+const Symbol = ({ type, setSymbol = () => {}, className = '', tabindex }) => {
   const onCLick = () => {
     setSymbol(type);
   };
 
   return (
-    <div className={`symbol ${className}`} onClick={onCLick}>
+    <div className={`symbol ${className}`} onClick={onCLick} onKeyPress={onCLick} role="button" tabindex={tabindex}>
       <div className={`symbol__outer symbol__outer--${type}`}>
         <div className="symbol__inner">
-          <div className="symbol__symbol">
-            {ICONS[type]}
-          </div>
+          <div className="symbol__symbol">{ICONS[type]}</div>
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default Symbol;
