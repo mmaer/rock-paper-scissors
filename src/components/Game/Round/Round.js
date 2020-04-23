@@ -55,7 +55,7 @@ const Round = ({ userSymbol, setSymbol }) => {
   const [computerSymbol, setComputerSymbol] = useState('');
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       const computerSymbol = getComputerSymbol();
       const result = RESULTS[userSymbol][computerSymbol];
       const newResult = POINTS[result](score);
@@ -64,7 +64,11 @@ const Round = ({ userSymbol, setSymbol }) => {
       setResult(result);
       setComputerSymbol(computerSymbol);
     }, TIME_FOR_COMPUTER_SYMBOL);
-  });
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
 
   const playAgain = () => {
     setSymbol('');
@@ -79,7 +83,7 @@ const Round = ({ userSymbol, setSymbol }) => {
         </div>
       </div>
       {computerSymbol && (
-        <div>
+        <div className="round__result">
           <h2 className="round__score-text">{SCORE_TEST[result]}</h2>
           <button className="round__button" onClick={playAgain}>
             PLAY AGAIN

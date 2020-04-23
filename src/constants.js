@@ -4,4 +4,4 @@ export const SYMBOLS = {
   SCISSORS: 'scissors',
 };
 
-export const TIME_FOR_COMPUTER_SYMBOL = 3000;
+export const TIME_FOR_COMPUTER_SYMBOL = 2000;
