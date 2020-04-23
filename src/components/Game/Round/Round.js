@@ -72,19 +72,19 @@ const Round = ({ userSymbol, setSymbol }) => {
 
   return (
     <div className="round">
-      <div className="round__picked">
+      <div>
         <div className="round__text">YOU PICKED</div>
         <div className="round__symbol">
           <Symbol type={userSymbol} className={result === RESULTS_TYPES.WIN ? 'symbol--win' : ''}/>
         </div>
       </div>
       {computerSymbol && (
-        <div className="round__score">
+        <div>
           <h2 className="round__score-text">{SCORE_TEST[result]}</h2>
           <button className="round__button" onClick={playAgain}>PLAY AGAIN</button>
         </div>
       )}
-      <div className="round__picked">
+      <div>
         <div className="round__text">THE HOUSE PICKED</div>
         <div className="round__symbol">
           {computerSymbol ? 

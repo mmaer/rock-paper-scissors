@@ -1,7 +1,8 @@
 .game {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 50px auto;
-    width: 600px;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 600px;
 }

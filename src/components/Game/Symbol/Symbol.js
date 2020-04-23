@@ -14,7 +14,7 @@ const ICONS = {
   [SYMBOLS.SCISSORS]: <HandScissors />,
 }
 
-const Symbol = ({ type, setSymbol, className = '' }) => {
+const Symbol = ({ type, setSymbol = () => {}, className = '' }) => {
   const onCLick = () => {
     setSymbol(type);
   };
