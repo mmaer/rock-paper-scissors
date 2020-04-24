@@ -2,32 +2,61 @@
 
 .round {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: inherit;
+  width: 100%;
+
+  &__item {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media (#{$aboveTablet}) {
+      flex-direction: column;
+    }
+  }
 
   &__result {
     z-index: 1;
+    order: 1;
+
+    @media (#{$aboveTablet}) {
+      order: 0;
+    }
   }
 
   &__text {
     color: $white;
-    font-size: 24px;
+    font-size: 16px;
     text-align: center;
+
+    @media (#{$aboveTablet}) {
+      font-size: 24px;
+    }
   }
 
   &__score-text {
     color: $white;
-    font-size: 32px;
+    font-size: 42px;
     text-align: center;
+
+    @media (#{$aboveTablet}) {
+      font-size: 32px;
+    }
   }
 
   &__button {
     font-family: 'BarlowSemiCondensedBold';
     font-size: 18px;
-    padding: 15px 30px;
+    padding: 15px 60px;
     border-radius: 10px;
     color: $smoky;
     margin-top: 10px;
+    background: $white;
+
+    @media (#{$aboveTablet}) {
+      padding: 15px 30px;
+    }
 
     &:hover {
       color: $vin-rouge;
@@ -35,11 +64,16 @@
   }
 
   &__symbol {
-    height: 280px;
-    width: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 0;
+
+    @media (#{$aboveTablet}) {
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
   }
 
   &__empty-symbol {
@@ -47,6 +81,10 @@
     border-radius: 50%;
     height: 120px;
     width: 120px;
-    margin: 30px;
+
+    @media (#{$aboveTablet}) {
+      height: 200px;
+      width: 200px;
+    }
   }
 }

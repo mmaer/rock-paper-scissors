@@ -1,3 +1,5 @@
+@import '../../../styles/variable.scss';
+
 .pick-symbol {
   display: flex;
   justify-content: center;
@@ -6,10 +8,18 @@
   margin: 0 auto;
 
   &__symbol {
-    margin: 0 30px;
+    margin: 0 10px;
+
+    @media (#{$aboveTablet}) {
+      margin: 0 30px;
+    }
 
     &:last-child {
-      margin-top: 30px;
+      margin-top: 10px;
+
+      @media (#{$aboveTablet}) {
+        margin-top: 30px;
+      }
     }
   }
 }
