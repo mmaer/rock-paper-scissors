@@ -91,7 +91,7 @@ const Round = ({ userSymbol, setSymbol }) => {
         </div>
       )}
       <div className="round__item">
-        <div className="round__text">THE HOUSE PICKED</div>
+        <div className="round__text">HOUSE PICKED</div>
         <div className="round__symbol">
           {computerSymbol ? (
             <Symbol type={computerSymbol} className={result === RESULTS_TYPES.LOST ? 'symbol--win' : ''} tabIndex={0} />
