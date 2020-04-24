@@ -8,6 +8,7 @@
     "eslint": "eslint . --ext .js",
     "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
     "build": "webpack --config webpack.prod.js",
+    "build:analyzer": "ANALYZER=true webpack --config webpack.prod.js",
     "start": "node dev-server.js"
   },
   "author": "Kamil Kruczek",
@@ -38,10 +39,12 @@
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.4",
     "webpack": "^5.0.0-beta.15",
+    "webpack-bundle-analyzer": "^3.7.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-hot-middleware": "^2.25.0",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "webpack-null-plugin": "0.0.2"
   },
   "dependencies": {
     "react": "^16.13.1",
