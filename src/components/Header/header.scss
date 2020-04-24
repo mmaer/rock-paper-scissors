@@ -61,12 +61,11 @@
   }
 
   &__score-points {
-    font-family: 'BarlowSemiCondensedSemiBold';
     font-size: 36px;
     color: $smoky;
 
     @media (#{$aboveTablet}) {
-      font-size: 62px;
+      font-size: 56px;
     }
   }
 }
