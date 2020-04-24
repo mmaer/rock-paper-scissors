@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint . --ext .js",
     "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
-    "build": "webpack",
+    "build": "webpack --config webpack.prod.js",
     "start": "node dev-server.js"
   },
   "author": "Kamil Kruczek",
@@ -40,7 +40,8 @@
     "webpack": "^5.0.0-beta.15",
     "webpack-cli": "^3.3.11",
     "webpack-dev-middleware": "^3.7.2",
-    "webpack-hot-middleware": "^2.25.0"
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "react": "^16.13.1",
