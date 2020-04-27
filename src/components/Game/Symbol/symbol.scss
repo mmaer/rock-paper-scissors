@@ -1,13 +1,12 @@
 @import '../../../styles/variable.scss';
 
-$symbol-outer-size-mobile: 130px;
-$symbol-inner-size-mobile: 100px;
-
-$symbol-outer-size: 200px;
-$symbol-inner-size: 160px;
+$symbol-outer-size: 100%;
+$symbol-inner-size: 80%;
 
 .symbol {
   border-radius: 50%;
+  height: 100%;
+  width: 100%;
 
   &:hover {
     cursor: pointer;
@@ -30,19 +29,14 @@ $symbol-inner-size: 160px;
   }
 
   &__outer {
-    height: $symbol-outer-size-mobile;
-    width: $symbol-outer-size-mobile;
+    height: $symbol-outer-size;
+    width: $symbol-outer-size;
     background-color: $white;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: box-shadow 0.3s ease-in-out;
-
-    @media (#{$aboveTablet}) {
-      height: $symbol-outer-size;
-      width: $symbol-outer-size;
-    }
 
     &--paper {
       background-image: radial-gradient($royal-blue, $cornflower-blue);
@@ -61,8 +55,8 @@ $symbol-inner-size: 160px;
   }
 
   &__inner {
-    height: $symbol-inner-size-mobile;
-    width: $symbol-inner-size-mobile;
+    height: $symbol-inner-size;
+    width: $symbol-inner-size;
     background-color: $mercury;
     box-shadow: inset 0 5px 0 0 $blue-haze;
     transition: box-shadow 0.3s ease-in-out;
@@ -70,11 +64,6 @@ $symbol-inner-size: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @media (#{$aboveTablet}) {
-      height: $symbol-inner-size;
-      width: $symbol-inner-size;
-    }
   }
 
   &__symbol {
@@ -84,7 +73,7 @@ $symbol-inner-size: 160px;
       height: 45px;
       color: $gun-powder;
 
-      @media (#{$aboveTablet}) {
+      @media (#{$above-tablet}) {
         height: 65px;
       }
     }

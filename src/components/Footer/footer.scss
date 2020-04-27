@@ -11,7 +11,7 @@
     color: $victoria;
     text-align: center;
 
-    @media (#{$aboveTablet}) {
+    @media (#{$above-tablet}) {
       font-size: 14px;
     }
   }

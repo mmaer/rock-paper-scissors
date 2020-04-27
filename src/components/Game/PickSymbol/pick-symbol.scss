@@ -9,15 +9,24 @@
 
   &__symbol {
     margin: 0 10px;
+    height: $symbol-mobile-size;
+    width: $symbol-mobile-size;
 
-    @media (#{$aboveTablet}) {
+    @media (#{$above-big-mobile}) {
+      height: $symbol-big-mobile-size;
+      width: $symbol-big-mobile-size;
+    }
+
+    @media (#{$above-tablet}) {
       margin: 0 30px;
+      height: $symbol-size;
+      width: $symbol-size;
     }
 
     &:last-child {
       margin-top: 10px;
 
-      @media (#{$aboveTablet}) {
+      @media (#{$above-tablet}) {
         margin-top: 30px;
       }
     }
